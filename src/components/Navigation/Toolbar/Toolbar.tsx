@@ -4,11 +4,13 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 import Logo from "../../Logo/Logo";
 type toolbarProps = {
   children?: any;
+  showSideDrawer?: any;
 };
 
 const toolbar = (props: toolbarProps) => {
   return (
     <header className={classes.Toolbar}>
+      <button onClick={props.showSideDrawer}></button>
       <div>MENU,{props.children}</div>
       <div className={classes.Logo}>
         <Logo />

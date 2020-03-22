@@ -7,13 +7,14 @@ import Aux from "../../../hoc/Aux";
 
 type sideDrawerProps = {
   show?: any;
+  showSideDrawer?: any;
   sideDrawerClosed?: any;
 };
 const sideDrawer = (props: sideDrawerProps) => {
   return (
     <Aux>
       <Backdrop show={props.show} clicked={props.sideDrawerClosed} />
-      <div className={classes.SideDrawer}>
+      <div className={props.showSideDrawer ? classes.SideDrawer : ""}>
         <div className={classes.Logo}>
           <Logo />
         </div>
