@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Toolbar from "../Navigation/Toolbar/Toolbar";
 import Aux from "../../hoc/Aux";
 import classes from "./Layout.module.css";
@@ -6,17 +6,28 @@ import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 
 type LayoutProps = {
   children?: any;
+  show?: any;
 };
 
-const layout = (props: LayoutProps) => {
-  return (
-    <Aux>
-      <Toolbar />
-      <SideDrawer />
-      <div>T SideDrawer, Backdrop</div>
-      <main className={classes.Content}>{props.children}</main>
-    </Aux>
-  );
-};
+class Layout extends Component<LayoutProps> {
+  constructor(props: LayoutProps) {
+    super(props);
+  }
 
-export default layout;
+  render() {
+    return (
+      <Aux>
+        <Toolbar />
+        <SideDrawer />
+        <div className={classes.Content}>SideDrawer, Backdrop</div>
+
+        <main className={classes.Content}>
+          {this.props.children}
+          <p>Where Am I?</p>
+        </main>
+      </Aux>
+    );
+  }
+}
+
+export default Layout;

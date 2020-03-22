@@ -2,15 +2,24 @@ import React from "react";
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
 import classes from "./SideDrawer.module.css";
+import Backdrop from "../../UI/Backdrop/Backdrop";
+import Aux from "../../../hoc/Aux";
 
-const sideDrawer = () => {
+type sideDrawerProps = {
+  show?: any;
+  sideDrawerClosed?: any;
+};
+const sideDrawer = (props: sideDrawerProps) => {
   return (
-    <div className={classes.SideDrawer}>
-      <div className={classes.Logo}>
-        <Logo />
+    <Aux>
+      <Backdrop show={props.show} clicked={props.sideDrawerClosed} />
+      <div className={classes.SideDrawer}>
+        <div className={classes.Logo}>
+          <Logo />
+        </div>
+        <NavigationItems />
       </div>
-      <NavigationItems />
-    </div>
+    </Aux>
   );
 };
 

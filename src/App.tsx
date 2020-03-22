@@ -7,9 +7,7 @@ import classes from "./App.module.css";
 function App() {
   return (
     <div className="App">
-      <Layout>
-        <p>Khean ter ai sus</p>
-      </Layout>
+      <Layout>Khean ter ai sus</Layout>
       <div className={classes.Logo}>
         <Logo />
       </div>
