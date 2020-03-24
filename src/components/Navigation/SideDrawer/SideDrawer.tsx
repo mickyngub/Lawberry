@@ -6,15 +6,25 @@ import Backdrop from "../../UI/Backdrop/Backdrop";
 import Aux from "../../../hoc/Aux";
 
 type sideDrawerProps = {
-  show?: any;
   showSideDrawer?: any;
   sideDrawerClosed?: any;
+  showBackDrop?: any;
 };
 const sideDrawer = (props: sideDrawerProps) => {
   return (
     <Aux>
-      <Backdrop show={props.show} clicked={props.sideDrawerClosed} />
-      <div className={props.showSideDrawer ? classes.SideDrawer : ""}>
+      <div
+        className={props.showSideDrawer ? classes.SideDrawer : classes.noShow}
+      >
+        <Backdrop
+          showBackDrop={props.showBackDrop}
+          clicked={props.sideDrawerClosed}
+        />
+      </div>
+
+      <div
+        className={props.showSideDrawer ? classes.SideDrawer : classes.noShow}
+      >
         <div className={classes.Logo}>
           <Logo />
         </div>
