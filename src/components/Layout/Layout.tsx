@@ -34,11 +34,11 @@ class Layout extends Component<LayoutProps> {
           showSideDrawer={this.state.showSideDrawer}
           sideDrawerClosed={this.closedSideDrawerHandler}
         />
-        <div className={classes.Content}>SideDrawer, Backdrop</div>
+        {/* <div className={classes.Content}>SideDrawer, Backdrop</div> */}
 
         <main className={classes.Content}>
           {this.props.children}
-          <p>Where Am I?</p>
+          {/* <p>Where Am I?</p> */}
         </main>
       </Aux>
     );
