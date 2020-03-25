@@ -1,6 +1,8 @@
 .Logo {
-  margin-top: 52px;
-  height: 720px;
-  width: 500px;
+  background-color: none;
+  flex: 1;
+  padding-top: 10%;
+  /* position: relative; */
   text-align: center;
+  height: 500px;
 }
