@@ -1,9 +1,10 @@
 import React from "react";
 import Logo from "./components/Logo/Logo";
-// import "./App.css";
+import "./App.css";
 import Layout from "./components/Layout/Layout";
 import classes from "./App.module.css";
 import Aux from "./hoc/Aux";
+import { Button } from "antd";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Layout />
       <div className={classes.Logo}>
         <Logo />
+      </div>
+      <div className="App">
+        <Button type="primary">Button</Button>
       </div>
     </Aux>
     // </div>
