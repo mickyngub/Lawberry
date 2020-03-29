@@ -7,13 +7,13 @@ import { Layout as LayoutAntd } from "antd";
 import { Menu, Breadcrumb } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 // import Logo from "../Logo/Logo";
-// import classes from "../Layout/Layout.module.css";
+import classes from "../Layout/Layout.module.css";
 // import SubMenu from "antd/lib/menu/SubMenu";
 // import Aux from "../../hoc/Aux";
 // import LogoIcon from "../Logo/Logo";
-import { Empty } from "antd";
+// import { Empty } from "antd";
 // import { Card } from "antd";
-// import lawberrylogo from "../../assets/logoLaw.png";
+import lawberrylogo from "../../assets/logoLaw.png";
 // import Icon from "@ant-design/icons";
 
 const { Header, Content, Footer } = LayoutAntd;
@@ -138,12 +138,15 @@ class Layout extends Component<LayoutProps> {
             />
           </div> */}
 
+          <div className={classes.shadow}>
+            <img src={lawberrylogo} />
+          </div>
           <div
             className="site-layout-background"
             style={{ padding: 24, minHeight: 380, textAlign: "center" }}
           >
             {/* <div className={classes.Logo}> */}
-            <Empty description={false} />
+            {/* <Empty description={false} /> */}
             {/* </div> */}
             {/* <Card
               style={{ width: 240, textAlign: "center" }}
