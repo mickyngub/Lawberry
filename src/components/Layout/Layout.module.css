@@ -19,7 +19,8 @@
   background-color: none;
   flex: 1;
   padding-top: 10%;
-  /* position: relative; */
-  text-align: center;
+  position: fixed;
+  margin-right: auto;
+  margin-left: auto;
   height: 500px;
 }

@@ -30,7 +30,7 @@ class Layout extends Component<LayoutProps> {
     showSideDrawer: false,
     showBackDrop: false,
 
-    mobile: window.innerWidth <= 500
+    mobile: window.innerWidth <= 499
   };
 
   closedSideDrawerHandler = () => {
@@ -53,13 +53,17 @@ class Layout extends Component<LayoutProps> {
     this.drawerToggleHandler();
     this.openSideDrawerHandler();
   };
+
   componentDidMount() {
     window.addEventListener("resize", this.resize.bind(this));
     this.resize();
   }
 
   resize() {
-    this.setState({ mobile: window.innerWidth <= 500 });
+    let currentMobile = window.innerWidth <= 499;
+    if (currentMobile !== this.state.mobile) {
+      this.setState({ mobile: currentMobile });
+    }
   }
 
   render() {
@@ -67,10 +71,12 @@ class Layout extends Component<LayoutProps> {
     if (this.state.mobile) {
       contentMenu = (
         <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["2"]}>
-          <MenuOutlined
-            onClick={this.openSideDrawerHandler}
-            style={{ color: "red", fontSize: 20 }}
-          />
+          <Menu.Item>
+            <MenuOutlined
+              onClick={this.openSideDrawerHandler}
+              style={{ color: "red", fontSize: 20 }}
+            />
+          </Menu.Item>
         </Menu>
       );
     } else {
