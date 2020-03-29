@@ -2,3 +2,24 @@
   margin-top: 72px;
   background-color: gold;
 }
+
+@media (max-width: 499px) {
+  .MobileOnly {
+    display: none;
+  }
+}
+
+@media (min-width: 500px) {
+  .DesktopOnly {
+    display: none;
+  }
+}
+
+.Logo {
+  background-color: none;
+  flex: 1;
+  padding-top: 10%;
+  /* position: relative; */
+  text-align: center;
+  height: 500px;
+}
