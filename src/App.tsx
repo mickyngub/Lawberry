@@ -17,6 +17,12 @@ function App() {
       <div className="App">
         <Button type="primary">Button</Button>
       </div>
+      <div className="App">
+        <Button type="primary">Button</Button>
+      </div>
+      <div className="App">
+        <Button type="primary">Button</Button>
+      </div>
     </Aux>
     // </div>
   );
