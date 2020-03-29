@@ -17,8 +17,11 @@
 
 .Logo {
   display: flex;
+
+  flex: auto;
   height: 100vh;
-  width: 100vw;
+  width: 1;
+  padding-top: 250px;
   align-items: center;
   justify-content: center;
 }

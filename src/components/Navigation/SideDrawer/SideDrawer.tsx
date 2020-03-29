@@ -27,10 +27,7 @@ const sideDrawer = (props: sideDrawerProps) => {
       <div
         className={props.showSideDrawer ? classes.SideDrawer : classes.noShow}
       >
-        <RocketTwoTone
-          className={classes.Logo}
-          style={{ fontSize: "30px", textAlign: "center" }}
-        />
+        <RocketTwoTone className={classes.Logo} style={{ fontSize: "30px" }} />
         <Button href="/" style={{ color: "" }} type="primary" block>
           Law
         </Button>

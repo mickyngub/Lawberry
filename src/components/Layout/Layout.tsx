@@ -10,7 +10,11 @@ import { MenuOutlined } from "@ant-design/icons";
 // import classes from "../Layout/Layout.module.css";
 // import SubMenu from "antd/lib/menu/SubMenu";
 // import Aux from "../../hoc/Aux";
-// import Logo from "../Logo/Logo";
+// import LogoIcon from "../Logo/Logo";
+import { Empty } from "antd";
+// import { Card } from "antd";
+// import lawberrylogo from "../../assets/logoLaw.png";
+// import Icon from "@ant-design/icons";
 
 const { Header, Content, Footer } = LayoutAntd;
 
@@ -126,13 +130,25 @@ class Layout extends Component<LayoutProps> {
             <Breadcrumb.Item>List</Breadcrumb.Item>
             <Breadcrumb.Item>App</Breadcrumb.Item>
           </Breadcrumb>
+          {/* <div>
+            <Icon
+              className={classes.Logo}
+              component={() => <img src={lawberrylogo} />}
+              style={{}}
+            />
+          </div> */}
+
           <div
             className="site-layout-background"
-            style={{ padding: 24, minHeight: 380 }}
+            style={{ padding: 24, minHeight: 380, textAlign: "center" }}
           >
-            {/* <div className={classes.Logo}>
-              <Logo />
-            </div> */}
+            {/* <div className={classes.Logo}> */}
+            <Empty description={false} />
+            {/* </div> */}
+            {/* <Card
+              style={{ width: 240, textAlign: "center" }}
+              cover={<img alt="example" src={lawberrylogo} />}
+            /> */}
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
