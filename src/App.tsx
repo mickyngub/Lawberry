@@ -5,7 +5,7 @@ import Layout from "./components/Layout/Layout";
 // import classes from "./App.module.css";
 import Aux from "./hoc/Aux";
 import { Button } from "antd";
-import { Route } from "react-router";
+import { Route, Switch } from "react-router";
 import HomePage from "./containers/HomePage/HomePage";
 import ExternalLinks from "./containers/ExternalLinks/ExternalLinks";
 
@@ -13,8 +13,12 @@ function App() {
   return (
     <Aux>
       <Layout>
-        <Route path="/externalLinks" component={ExternalLinks} />
-        <Route exact path="/" component={HomePage} />
+        <Switch>
+          <Route path="/externalLinks" component={ExternalLinks} />
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+        </Switch>
       </Layout>
       {/* <div className={classes.Logo}>
         <Logo />

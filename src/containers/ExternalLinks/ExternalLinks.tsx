@@ -6,7 +6,7 @@ class ExternalLinks extends Component {
       <div>
         <br></br>
         <br></br>
-        <br></br>
+        <br> </br>
         <h1>Home</h1>
         <h1>Micky</h1>
         <h1>Home</h1>
