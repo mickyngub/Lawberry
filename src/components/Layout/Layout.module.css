@@ -16,11 +16,13 @@
 }
 
 .Logo {
-  background-color: none;
-  flex: 1;
-  padding-top: 10%;
-  position: fixed;
-  margin-right: auto;
-  margin-left: auto;
-  height: 500px;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
 }

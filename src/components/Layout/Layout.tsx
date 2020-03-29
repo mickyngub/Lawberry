@@ -7,10 +7,10 @@ import { Layout as LayoutAntd } from "antd";
 import { Menu, Breadcrumb } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 // import Logo from "../Logo/Logo";
-import classes from "../Layout/Layout.module.css";
+// import classes from "../Layout/Layout.module.css";
 // import SubMenu from "antd/lib/menu/SubMenu";
 // import Aux from "../../hoc/Aux";
-import Logo from "../Logo/Logo";
+// import Logo from "../Logo/Logo";
 
 const { Header, Content, Footer } = LayoutAntd;
 
@@ -64,6 +64,14 @@ class Layout extends Component<LayoutProps> {
     if (currentMobile !== this.state.mobile) {
       this.setState({ mobile: currentMobile });
     }
+
+    // this.setState((prevState: any) => {
+    //   if (prevState !== currentMobile) {
+    //     return { mobile: currentMobile };
+    //   } else {
+    //     return { mobile: prevState };
+    //   }
+    // });
   }
 
   render() {
@@ -122,9 +130,9 @@ class Layout extends Component<LayoutProps> {
             className="site-layout-background"
             style={{ padding: 24, minHeight: 380 }}
           >
-            <div className={classes.Logo}>
+            {/* <div className={classes.Logo}>
               <Logo />
-            </div>
+            </div> */}
           </div>
         </Content>
         <Footer style={{ textAlign: "center" }}>
