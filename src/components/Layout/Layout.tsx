@@ -6,14 +6,14 @@ import SideDrawer from "../Navigation/SideDrawer/SideDrawer";
 import { Layout as LayoutAntd } from "antd";
 import { Menu, Breadcrumb } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
-// import Logo from "../Logo/Logo";
-import classes from "../Layout/Layout.module.css";
+import Logo from "../Logo/Logo";
+// import classes from "../Layout/Layout.module.css";
 // import SubMenu from "antd/lib/menu/SubMenu";
 // import Aux from "../../hoc/Aux";
 // import LogoIcon from "../Logo/Logo";
 // import { Empty } from "antd";
 // import { Card } from "antd";
-import lawberrylogo from "../../assets/logoLaw.png";
+// import lawberrylogo from "../../assets/logoLaw.png";
 // import Icon from "@ant-design/icons";
 
 const { Header, Content, Footer } = LayoutAntd;
@@ -123,7 +123,10 @@ class Layout extends Component<LayoutProps> {
         />
         <Content
           className="site-layout"
-          style={{ padding: "0 50px", marginTop: 64 }}
+          style={{
+            padding: "0 50px",
+            marginTop: 64
+          }}
         >
           <Breadcrumb style={{ margin: "16px 0" }}>
             <Breadcrumb.Item>Home</Breadcrumb.Item>
@@ -137,10 +140,10 @@ class Layout extends Component<LayoutProps> {
               style={{}}
             />
           </div> */}
-
-          <div className={classes.shadow}>
+          <Logo />
+          {/* <div className={classes.shadow}>
             <img src={lawberrylogo} />
-          </div>
+          </div> */}
           <div
             className="site-layout-background"
             style={{ padding: 24, minHeight: 380, textAlign: "center" }}
@@ -154,6 +157,7 @@ class Layout extends Component<LayoutProps> {
             /> */}
           </div>
         </Content>
+
         <Footer style={{ textAlign: "center" }}>
           H&M Design ©2018 Created by MICKIE AND HOMIE
         </Footer>
