@@ -3,7 +3,7 @@ import React from "react";
 import "./App.css";
 import Layout from "./components/Layout/Layout";
 // import classes from "./App.module.css";
-import Aux from "./hoc/Aux";
+import Aux from "./hoc/Lux";
 // import ExternalLinks from "./containers/ExternalLinks/ExternalLinks";
 
 function App() {
