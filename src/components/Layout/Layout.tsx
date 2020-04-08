@@ -34,7 +34,7 @@ class Layout extends Component<LayoutProps> {
     showSideDrawer: false,
     showBackDrop: false,
 
-    mobile: window.innerWidth <= 499
+    mobile: window.innerWidth <= 498,
   };
 
   closedSideDrawerHandler = () => {
@@ -107,7 +107,7 @@ class Layout extends Component<LayoutProps> {
             alignItems: "center",
             position: "fixed",
             zIndex: 1,
-            width: "100%"
+            width: "100%",
           }}
         >
           {contentMenu}
@@ -125,7 +125,7 @@ class Layout extends Component<LayoutProps> {
           className="site-layout"
           style={{
             padding: "0 50px",
-            marginTop: 64
+            marginTop: 64,
           }}
         >
           <Breadcrumb style={{ margin: "16px 0" }}>
