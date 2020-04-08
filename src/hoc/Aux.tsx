@@ -1,5 +1,5 @@
 type AuxProps = {
-  jsdkfl?: any;
+  jsdkf?: any;
   children?: any;
 };
 
